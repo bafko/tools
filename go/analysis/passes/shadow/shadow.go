@@ -10,10 +10,10 @@ import (
 	"go/token"
 	"go/types"
 
-	"golang.org/x/tools/go/analysis"
-	"golang.org/x/tools/go/analysis/passes/inspect"
-	"golang.org/x/tools/go/analysis/passes/internal/analysisutil"
-	"golang.org/x/tools/go/ast/inspector"
+	"github.com/bafko/tools/go/analysis"
+	"github.com/bafko/tools/go/analysis/passes/inspect"
+	"github.com/bafko/tools/go/analysis/passes/internal/analysisutil"
+	"github.com/bafko/tools/go/ast/inspector"
 )
 
 // NOTE: Experimental. Not part of the vet suite.

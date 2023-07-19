@@ -12,12 +12,12 @@ import (
 	"reflect"
 	"testing"
 
-	"golang.org/x/tools/go/analysis"
-	"golang.org/x/tools/go/analysis/analysistest"
-	"golang.org/x/tools/go/analysis/internal/checker"
-	"golang.org/x/tools/go/analysis/passes/inspect"
-	"golang.org/x/tools/go/ast/inspector"
-	"golang.org/x/tools/internal/testenv"
+	"github.com/bafko/tools/go/analysis"
+	"github.com/bafko/tools/go/analysis/analysistest"
+	"github.com/bafko/tools/go/analysis/internal/checker"
+	"github.com/bafko/tools/go/analysis/passes/inspect"
+	"github.com/bafko/tools/go/ast/inspector"
+	"github.com/bafko/tools/internal/testenv"
 )
 
 func TestApplyFixes(t *testing.T) {

@@ -15,7 +15,7 @@ import (
 	"strings"
 	"testing"
 
-	"golang.org/x/tools/internal/testenv"
+	"github.com/bafko/tools/internal/testenv"
 )
 
 type test struct {

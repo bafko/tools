@@ -7,7 +7,7 @@ package ssa
 import (
 	"go/types"
 
-	"golang.org/x/tools/internal/typeparams"
+	"github.com/bafko/tools/internal/typeparams"
 )
 
 // Type substituter for a fixed set of replacement types.

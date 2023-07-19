@@ -28,8 +28,8 @@ import (
 	"testing"
 	"time"
 
-	"golang.org/x/tools/internal/goroot"
-	"golang.org/x/tools/internal/testenv"
+	"github.com/bafko/tools/internal/goroot"
+	"github.com/bafko/tools/internal/testenv"
 )
 
 func TestMain(m *testing.M) {

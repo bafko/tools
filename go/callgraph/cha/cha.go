@@ -27,10 +27,10 @@ package cha // import "golang.org/x/tools/go/callgraph/cha"
 import (
 	"go/types"
 
-	"golang.org/x/tools/go/callgraph"
-	"golang.org/x/tools/go/ssa"
-	"golang.org/x/tools/go/ssa/ssautil"
-	"golang.org/x/tools/go/types/typeutil"
+	"github.com/bafko/tools/go/callgraph"
+	"github.com/bafko/tools/go/ssa"
+	"github.com/bafko/tools/go/ssa/ssautil"
+	"github.com/bafko/tools/go/types/typeutil"
 )
 
 // CallGraph computes the call graph of the specified program using the

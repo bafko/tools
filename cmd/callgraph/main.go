@@ -30,15 +30,15 @@ import (
 	"runtime"
 	"text/template"
 
-	"golang.org/x/tools/go/buildutil"
-	"golang.org/x/tools/go/callgraph"
-	"golang.org/x/tools/go/callgraph/cha"
-	"golang.org/x/tools/go/callgraph/rta"
-	"golang.org/x/tools/go/callgraph/static"
-	"golang.org/x/tools/go/callgraph/vta"
-	"golang.org/x/tools/go/packages"
-	"golang.org/x/tools/go/ssa"
-	"golang.org/x/tools/go/ssa/ssautil"
+	"github.com/bafko/tools/go/buildutil"
+	"github.com/bafko/tools/go/callgraph"
+	"github.com/bafko/tools/go/callgraph/cha"
+	"github.com/bafko/tools/go/callgraph/rta"
+	"github.com/bafko/tools/go/callgraph/static"
+	"github.com/bafko/tools/go/callgraph/vta"
+	"github.com/bafko/tools/go/packages"
+	"github.com/bafko/tools/go/ssa"
+	"github.com/bafko/tools/go/ssa/ssautil"
 )
 
 // flags

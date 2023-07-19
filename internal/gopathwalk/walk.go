@@ -15,7 +15,7 @@ import (
 	"strings"
 	"time"
 
-	"golang.org/x/tools/internal/fastwalk"
+	"github.com/bafko/tools/internal/fastwalk"
 )
 
 // Options controls the behavior of a Walk call.

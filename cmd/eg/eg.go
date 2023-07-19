@@ -20,9 +20,9 @@ import (
 	"path/filepath"
 	"strings"
 
+	"github.com/bafko/tools/go/packages"
+	"github.com/bafko/tools/refactor/eg"
 	exec "golang.org/x/sys/execabs"
-	"golang.org/x/tools/go/packages"
-	"golang.org/x/tools/refactor/eg"
 )
 
 var (

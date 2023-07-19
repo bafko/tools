@@ -10,8 +10,8 @@ package nilness_test
 import (
 	"testing"
 
-	"golang.org/x/tools/go/analysis/analysistest"
-	"golang.org/x/tools/go/analysis/passes/nilness"
+	"github.com/bafko/tools/go/analysis/analysistest"
+	"github.com/bafko/tools/go/analysis/passes/nilness"
 )
 
 func TestNilnessGo117(t *testing.T) {

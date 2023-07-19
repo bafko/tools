@@ -16,7 +16,7 @@ import (
 	"log"
 	"os"
 
-	"golang.org/x/tools/internal/pprof"
+	"github.com/bafko/tools/internal/pprof"
 )
 
 func main() {

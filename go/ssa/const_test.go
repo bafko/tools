@@ -14,8 +14,8 @@ import (
 	"strings"
 	"testing"
 
-	"golang.org/x/tools/go/ssa"
-	"golang.org/x/tools/internal/typeparams"
+	"github.com/bafko/tools/go/ssa"
+	"github.com/bafko/tools/internal/typeparams"
 )
 
 func TestConstString(t *testing.T) {

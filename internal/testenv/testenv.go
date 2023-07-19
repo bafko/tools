@@ -20,8 +20,8 @@ import (
 	"testing"
 	"time"
 
+	"github.com/bafko/tools/internal/goroot"
 	"golang.org/x/mod/modfile"
-	"golang.org/x/tools/internal/goroot"
 
 	exec "golang.org/x/sys/execabs"
 )

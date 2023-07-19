@@ -12,7 +12,7 @@ import (
 	"runtime"
 	"testing"
 
-	"golang.org/x/tools/go/packages/packagestest"
+	"github.com/bafko/tools/go/packages/packagestest"
 )
 
 func TestBundle(t *testing.T) { packagestest.TestAll(t, testBundle) }

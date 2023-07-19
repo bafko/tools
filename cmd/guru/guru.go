@@ -23,8 +23,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"golang.org/x/tools/go/ast/astutil"
-	"golang.org/x/tools/go/loader"
+	"github.com/bafko/tools/go/ast/astutil"
+	"github.com/bafko/tools/go/loader"
 )
 
 type printfFunc func(pos interface{}, format string, args ...interface{})

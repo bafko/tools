@@ -10,8 +10,8 @@ import (
 	"io/ioutil"
 	"log"
 
-	"golang.org/x/tools/internal/gocommand"
-	intimp "golang.org/x/tools/internal/imports"
+	"github.com/bafko/tools/internal/gocommand"
+	intimp "github.com/bafko/tools/internal/imports"
 )
 
 // Options specifies options for processing files.

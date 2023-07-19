@@ -28,13 +28,13 @@ import (
 	"strings"
 	"testing"
 
-	"golang.org/x/tools/go/ast/inspector"
-	"golang.org/x/tools/go/buildutil"
-	"golang.org/x/tools/go/gcexportdata"
-	"golang.org/x/tools/go/loader"
-	"golang.org/x/tools/internal/gcimporter"
-	"golang.org/x/tools/internal/testenv"
-	"golang.org/x/tools/internal/typeparams/genericfeatures"
+	"github.com/bafko/tools/go/ast/inspector"
+	"github.com/bafko/tools/go/buildutil"
+	"github.com/bafko/tools/go/gcexportdata"
+	"github.com/bafko/tools/go/loader"
+	"github.com/bafko/tools/internal/gcimporter"
+	"github.com/bafko/tools/internal/testenv"
+	"github.com/bafko/tools/internal/typeparams/genericfeatures"
 )
 
 func readExportFile(filename string) ([]byte, error) {

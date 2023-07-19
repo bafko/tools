@@ -11,7 +11,7 @@ import (
 	"testing"
 	"time"
 
-	"golang.org/x/tools/go/callgraph/vta/internal/trie"
+	"github.com/bafko/tools/go/callgraph/vta/internal/trie"
 )
 
 // This file tests trie.Map by cross checking operations on a collection of

@@ -31,8 +31,8 @@ package inspect
 import (
 	"reflect"
 
-	"golang.org/x/tools/go/analysis"
-	"golang.org/x/tools/go/ast/inspector"
+	"github.com/bafko/tools/go/analysis"
+	"github.com/bafko/tools/go/ast/inspector"
 )
 
 var Analyzer = &analysis.Analyzer{

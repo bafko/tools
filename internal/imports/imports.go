@@ -23,8 +23,8 @@ import (
 	"strconv"
 	"strings"
 
-	"golang.org/x/tools/go/ast/astutil"
-	"golang.org/x/tools/internal/event"
+	"github.com/bafko/tools/go/ast/astutil"
+	"github.com/bafko/tools/internal/event"
 )
 
 // Options is golang.org/x/tools/imports.Options with extra internal-only options.

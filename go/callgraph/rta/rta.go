@@ -42,9 +42,9 @@ import (
 	"go/types"
 	"hash/crc32"
 
-	"golang.org/x/tools/go/callgraph"
-	"golang.org/x/tools/go/ssa"
-	"golang.org/x/tools/go/types/typeutil"
+	"github.com/bafko/tools/go/callgraph"
+	"github.com/bafko/tools/go/ssa"
+	"github.com/bafko/tools/go/types/typeutil"
 )
 
 // A Result holds the results of Rapid Type Analysis, which includes the

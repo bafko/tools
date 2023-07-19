@@ -34,8 +34,8 @@ import (
 	"time"
 	"unicode/utf8"
 
+	"github.com/bafko/tools/txtar"
 	"golang.org/x/net/websocket"
-	"golang.org/x/tools/txtar"
 )
 
 // RunScripts specifies whether the socket handler should execute shell scripts

@@ -53,7 +53,7 @@ import (
 	"runtime"
 	"sync/atomic"
 
-	"golang.org/x/tools/go/ssa"
+	"github.com/bafko/tools/go/ssa"
 )
 
 type continuation int

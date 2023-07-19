@@ -17,8 +17,8 @@ import (
 	"log"
 	"os"
 
-	"golang.org/x/tools/go/buildutil"
-	"golang.org/x/tools/refactor/rename"
+	"github.com/bafko/tools/go/buildutil"
+	"github.com/bafko/tools/refactor/rename"
 )
 
 var (

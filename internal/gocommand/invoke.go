@@ -23,10 +23,10 @@ import (
 
 	exec "golang.org/x/sys/execabs"
 
-	"golang.org/x/tools/internal/event"
-	"golang.org/x/tools/internal/event/keys"
-	"golang.org/x/tools/internal/event/label"
-	"golang.org/x/tools/internal/event/tag"
+	"github.com/bafko/tools/internal/event"
+	"github.com/bafko/tools/internal/event/keys"
+	"github.com/bafko/tools/internal/event/label"
+	"github.com/bafko/tools/internal/event/tag"
 )
 
 // An Runner will run go command invocations and serialize

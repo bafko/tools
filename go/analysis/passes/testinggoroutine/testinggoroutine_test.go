@@ -7,9 +7,9 @@ package testinggoroutine_test
 import (
 	"testing"
 
-	"golang.org/x/tools/go/analysis/analysistest"
-	"golang.org/x/tools/go/analysis/passes/testinggoroutine"
-	"golang.org/x/tools/internal/typeparams"
+	"github.com/bafko/tools/go/analysis/analysistest"
+	"github.com/bafko/tools/go/analysis/passes/testinggoroutine"
+	"github.com/bafko/tools/internal/typeparams"
 )
 
 func Test(t *testing.T) {

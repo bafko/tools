@@ -13,9 +13,9 @@ import (
 	"testing"
 	"unsafe"
 
-	"golang.org/x/tools/go/gcexportdata"
-	"golang.org/x/tools/go/packages"
-	"golang.org/x/tools/internal/testenv"
+	"github.com/bafko/tools/go/gcexportdata"
+	"github.com/bafko/tools/go/packages"
+	"github.com/bafko/tools/internal/testenv"
 )
 
 // TestStdlib ensures that all packages in std and x/tools can be

@@ -47,8 +47,8 @@ import (
 	"sync"
 	"testing"
 
-	guru "golang.org/x/tools/cmd/guru"
-	"golang.org/x/tools/internal/testenv"
+	guru "github.com/bafko/tools/cmd/guru"
+	"github.com/bafko/tools/internal/testenv"
 )
 
 func init() {

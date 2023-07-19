@@ -22,12 +22,12 @@ import (
 	"testing"
 	"text/scanner"
 
-	"golang.org/x/tools/go/analysis"
-	"golang.org/x/tools/go/analysis/internal/checker"
-	"golang.org/x/tools/go/packages"
-	"golang.org/x/tools/internal/diff"
-	"golang.org/x/tools/internal/testenv"
-	"golang.org/x/tools/txtar"
+	"github.com/bafko/tools/go/analysis"
+	"github.com/bafko/tools/go/analysis/internal/checker"
+	"github.com/bafko/tools/go/packages"
+	"github.com/bafko/tools/internal/diff"
+	"github.com/bafko/tools/internal/testenv"
+	"github.com/bafko/tools/txtar"
 )
 
 // WriteFiles is a helper function that creates a temporary directory

@@ -15,7 +15,7 @@ import (
 	"go/ast"
 	"go/types"
 
-	"golang.org/x/tools/go/analysis"
+	"github.com/bafko/tools/go/analysis"
 )
 
 const Doc = `find calls to a particular function

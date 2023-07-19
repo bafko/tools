@@ -29,7 +29,7 @@ import (
 	"io"
 	"os/exec"
 
-	"golang.org/x/tools/internal/gcimporter"
+	"github.com/bafko/tools/internal/gcimporter"
 )
 
 // Find returns the name of an object (.o) or archive (.a) file

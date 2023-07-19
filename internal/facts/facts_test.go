@@ -16,11 +16,11 @@ import (
 	"strings"
 	"testing"
 
-	"golang.org/x/tools/go/analysis/analysistest"
-	"golang.org/x/tools/go/packages"
-	"golang.org/x/tools/internal/facts"
-	"golang.org/x/tools/internal/testenv"
-	"golang.org/x/tools/internal/typeparams"
+	"github.com/bafko/tools/go/analysis/analysistest"
+	"github.com/bafko/tools/go/packages"
+	"github.com/bafko/tools/internal/facts"
+	"github.com/bafko/tools/internal/testenv"
+	"github.com/bafko/tools/internal/typeparams"
 )
 
 type myFact struct {

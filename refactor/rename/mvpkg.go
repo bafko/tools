@@ -29,9 +29,9 @@ import (
 	"strings"
 	"text/template"
 
-	"golang.org/x/tools/go/buildutil"
-	"golang.org/x/tools/go/loader"
-	"golang.org/x/tools/refactor/importgraph"
+	"github.com/bafko/tools/go/buildutil"
+	"github.com/bafko/tools/go/loader"
+	"github.com/bafko/tools/refactor/importgraph"
 )
 
 // Move, given a package path and a destination package path, will try

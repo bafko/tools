@@ -14,10 +14,10 @@ import (
 	"runtime"
 	"testing"
 
-	"golang.org/x/tools/go/analysis"
-	"golang.org/x/tools/go/analysis/analysistest"
-	"golang.org/x/tools/go/analysis/internal/checker"
-	"golang.org/x/tools/internal/testenv"
+	"github.com/bafko/tools/go/analysis"
+	"github.com/bafko/tools/go/analysis/analysistest"
+	"github.com/bafko/tools/go/analysis/internal/checker"
+	"github.com/bafko/tools/internal/testenv"
 )
 
 func main() {

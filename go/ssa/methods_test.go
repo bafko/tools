@@ -11,9 +11,9 @@ import (
 	"go/types"
 	"testing"
 
-	"golang.org/x/tools/go/ssa"
-	"golang.org/x/tools/go/ssa/ssautil"
-	"golang.org/x/tools/internal/typeparams"
+	"github.com/bafko/tools/go/ssa"
+	"github.com/bafko/tools/go/ssa/ssautil"
+	"github.com/bafko/tools/internal/typeparams"
 )
 
 // Tests that MethodValue returns the expected method.

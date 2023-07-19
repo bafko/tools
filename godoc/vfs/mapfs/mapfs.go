@@ -15,7 +15,7 @@ import (
 	"strings"
 	"time"
 
-	"golang.org/x/tools/godoc/vfs"
+	"github.com/bafko/tools/godoc/vfs"
 )
 
 // New returns a new FileSystem from the provided map.

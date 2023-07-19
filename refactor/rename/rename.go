@@ -28,10 +28,10 @@ import (
 	"strconv"
 	"strings"
 
-	"golang.org/x/tools/go/loader"
-	"golang.org/x/tools/go/types/typeutil"
-	"golang.org/x/tools/refactor/importgraph"
-	"golang.org/x/tools/refactor/satisfy"
+	"github.com/bafko/tools/go/loader"
+	"github.com/bafko/tools/go/types/typeutil"
+	"github.com/bafko/tools/refactor/importgraph"
+	"github.com/bafko/tools/refactor/satisfy"
 )
 
 const Usage = `gorename: precise type-safe renaming of identifiers in Go source code.

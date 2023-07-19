@@ -15,9 +15,9 @@ import (
 	"testing"
 	"unicode/utf8"
 
-	"golang.org/x/tools/internal/diff"
-	"golang.org/x/tools/internal/diff/difftest"
-	"golang.org/x/tools/internal/testenv"
+	"github.com/bafko/tools/internal/diff"
+	"github.com/bafko/tools/internal/diff/difftest"
+	"github.com/bafko/tools/internal/testenv"
 )
 
 func TestApply(t *testing.T) {

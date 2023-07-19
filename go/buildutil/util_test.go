@@ -13,8 +13,8 @@ import (
 	"strings"
 	"testing"
 
-	"golang.org/x/tools/go/buildutil"
-	"golang.org/x/tools/go/packages/packagestest"
+	"github.com/bafko/tools/go/buildutil"
+	"github.com/bafko/tools/go/packages/packagestest"
 )
 
 func TestContainingPackage(t *testing.T) {

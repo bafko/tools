@@ -14,11 +14,11 @@ import (
 	"runtime"
 	"runtime/pprof"
 
-	"golang.org/x/tools/go/buildutil"
-	"golang.org/x/tools/go/packages"
-	"golang.org/x/tools/go/ssa"
-	"golang.org/x/tools/go/ssa/interp"
-	"golang.org/x/tools/go/ssa/ssautil"
+	"github.com/bafko/tools/go/buildutil"
+	"github.com/bafko/tools/go/packages"
+	"github.com/bafko/tools/go/ssa"
+	"github.com/bafko/tools/go/ssa/interp"
+	"github.com/bafko/tools/go/ssa/ssautil"
 )
 
 // flags

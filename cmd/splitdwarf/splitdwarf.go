@@ -28,7 +28,7 @@ import (
 	"strings"
 	"syscall"
 
-	"golang.org/x/tools/cmd/splitdwarf/internal/macho"
+	"github.com/bafko/tools/cmd/splitdwarf/internal/macho"
 )
 
 const (

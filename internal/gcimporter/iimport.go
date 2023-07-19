@@ -21,8 +21,8 @@ import (
 	"sort"
 	"strings"
 
-	"golang.org/x/tools/go/types/objectpath"
-	"golang.org/x/tools/internal/typeparams"
+	"github.com/bafko/tools/go/types/objectpath"
+	"github.com/bafko/tools/internal/typeparams"
 )
 
 type intReader struct {

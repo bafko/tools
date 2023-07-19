@@ -9,10 +9,10 @@ import (
 	"go/token"
 	"go/types"
 
-	"golang.org/x/tools/go/callgraph"
-	"golang.org/x/tools/go/ssa"
-	"golang.org/x/tools/go/types/typeutil"
-	"golang.org/x/tools/internal/typeparams"
+	"github.com/bafko/tools/go/callgraph"
+	"github.com/bafko/tools/go/ssa"
+	"github.com/bafko/tools/go/types/typeutil"
+	"github.com/bafko/tools/internal/typeparams"
 )
 
 // node interface for VTA nodes.

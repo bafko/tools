@@ -10,7 +10,7 @@ import (
 	"reflect"
 	"testing"
 
-	jsonrpc2 "golang.org/x/tools/internal/jsonrpc2_v2"
+	jsonrpc2 "github.com/bafko/tools/internal/jsonrpc2_v2"
 )
 
 func TestWireMessage(t *testing.T) {

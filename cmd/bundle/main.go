@@ -86,7 +86,7 @@ import (
 	"strings"
 	"unicode"
 
-	"golang.org/x/tools/go/packages"
+	"github.com/bafko/tools/go/packages"
 )
 
 var (

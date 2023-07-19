@@ -20,8 +20,8 @@ import (
 	"strings"
 	"time"
 
-	"golang.org/x/tools/blog/atom"
-	"golang.org/x/tools/present"
+	"github.com/bafko/tools/blog/atom"
+	"github.com/bafko/tools/present"
 )
 
 var (

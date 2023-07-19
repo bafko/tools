@@ -7,8 +7,8 @@
 package main
 
 import (
-	"golang.org/x/tools/go/analysis/passes/unusedresult"
-	"golang.org/x/tools/go/analysis/singlechecker"
+	"github.com/bafko/tools/go/analysis/passes/unusedresult"
+	"github.com/bafko/tools/go/analysis/singlechecker"
 )
 
 func main() { singlechecker.Main(unusedresult.Analyzer) }

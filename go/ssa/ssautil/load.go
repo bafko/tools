@@ -11,10 +11,10 @@ import (
 	"go/token"
 	"go/types"
 
-	"golang.org/x/tools/go/loader"
-	"golang.org/x/tools/go/packages"
-	"golang.org/x/tools/go/ssa"
-	"golang.org/x/tools/internal/typeparams"
+	"github.com/bafko/tools/go/loader"
+	"github.com/bafko/tools/go/packages"
+	"github.com/bafko/tools/go/ssa"
+	"github.com/bafko/tools/internal/typeparams"
 )
 
 // Packages creates an SSA program for a set of packages.

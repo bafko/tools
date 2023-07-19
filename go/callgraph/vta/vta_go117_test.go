@@ -10,9 +10,9 @@ package vta
 import (
 	"testing"
 
-	"golang.org/x/tools/go/callgraph/cha"
-	"golang.org/x/tools/go/ssa"
-	"golang.org/x/tools/go/ssa/ssautil"
+	"github.com/bafko/tools/go/callgraph/cha"
+	"github.com/bafko/tools/go/ssa"
+	"github.com/bafko/tools/go/ssa/ssautil"
 )
 
 func TestVTACallGraphGo117(t *testing.T) {

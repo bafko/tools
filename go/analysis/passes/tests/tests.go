@@ -15,9 +15,9 @@ import (
 	"unicode"
 	"unicode/utf8"
 
-	"golang.org/x/tools/go/analysis"
-	"golang.org/x/tools/go/analysis/passes/internal/analysisutil"
-	"golang.org/x/tools/internal/typeparams"
+	"github.com/bafko/tools/go/analysis"
+	"github.com/bafko/tools/go/analysis/passes/internal/analysisutil"
+	"github.com/bafko/tools/internal/typeparams"
 )
 
 //go:embed doc.go

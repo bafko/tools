@@ -13,10 +13,10 @@ import (
 	"sort"
 	"testing"
 
-	"golang.org/x/tools/go/expect"
-	"golang.org/x/tools/go/loader"
-	"golang.org/x/tools/go/ssa"
-	"golang.org/x/tools/internal/typeparams"
+	"github.com/bafko/tools/go/expect"
+	"github.com/bafko/tools/go/loader"
+	"github.com/bafko/tools/go/ssa"
+	"github.com/bafko/tools/internal/typeparams"
 )
 
 // TestGenericBodies tests that bodies of generic functions and methods containing

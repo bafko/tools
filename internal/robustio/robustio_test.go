@@ -11,7 +11,7 @@ import (
 	"testing"
 	"time"
 
-	"golang.org/x/tools/internal/robustio"
+	"github.com/bafko/tools/internal/robustio"
 )
 
 func TestFileInfo(t *testing.T) {

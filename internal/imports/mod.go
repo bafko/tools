@@ -18,10 +18,10 @@ import (
 	"strconv"
 	"strings"
 
+	"github.com/bafko/tools/internal/event"
+	"github.com/bafko/tools/internal/gocommand"
+	"github.com/bafko/tools/internal/gopathwalk"
 	"golang.org/x/mod/module"
-	"golang.org/x/tools/internal/event"
-	"golang.org/x/tools/internal/gocommand"
-	"golang.org/x/tools/internal/gopathwalk"
 )
 
 // ModuleResolver implements resolver for modules using the go command as little

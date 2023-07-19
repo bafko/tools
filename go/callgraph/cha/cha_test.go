@@ -21,12 +21,12 @@ import (
 	"strings"
 	"testing"
 
-	"golang.org/x/tools/go/callgraph"
-	"golang.org/x/tools/go/callgraph/cha"
-	"golang.org/x/tools/go/loader"
-	"golang.org/x/tools/go/ssa"
-	"golang.org/x/tools/go/ssa/ssautil"
-	"golang.org/x/tools/internal/typeparams"
+	"github.com/bafko/tools/go/callgraph"
+	"github.com/bafko/tools/go/callgraph/cha"
+	"github.com/bafko/tools/go/loader"
+	"github.com/bafko/tools/go/ssa"
+	"github.com/bafko/tools/go/ssa/ssautil"
+	"github.com/bafko/tools/internal/typeparams"
 )
 
 var inputs = []string{

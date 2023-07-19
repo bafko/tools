@@ -21,7 +21,7 @@ import (
 	"runtime/pprof"
 	"sync"
 
-	"golang.org/x/tools/go/buildutil"
+	"github.com/bafko/tools/go/buildutil"
 )
 
 // flags

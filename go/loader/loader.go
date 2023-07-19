@@ -21,9 +21,9 @@ import (
 	"sync"
 	"time"
 
-	"golang.org/x/tools/go/ast/astutil"
-	"golang.org/x/tools/go/internal/cgo"
-	"golang.org/x/tools/internal/typeparams"
+	"github.com/bafko/tools/go/ast/astutil"
+	"github.com/bafko/tools/go/internal/cgo"
+	"github.com/bafko/tools/internal/typeparams"
 )
 
 var ignoreVendor build.ImportMode

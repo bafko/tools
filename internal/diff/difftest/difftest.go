@@ -17,7 +17,7 @@ package difftest
 import (
 	"testing"
 
-	"golang.org/x/tools/internal/diff"
+	"github.com/bafko/tools/internal/diff"
 )
 
 const (

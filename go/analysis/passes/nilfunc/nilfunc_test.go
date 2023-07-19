@@ -5,9 +5,9 @@
 package nilfunc_test
 
 import (
-	"golang.org/x/tools/go/analysis/analysistest"
-	"golang.org/x/tools/go/analysis/passes/nilfunc"
-	"golang.org/x/tools/internal/typeparams"
+	"github.com/bafko/tools/go/analysis/analysistest"
+	"github.com/bafko/tools/go/analysis/passes/nilfunc"
+	"github.com/bafko/tools/internal/typeparams"
 	"testing"
 )
 

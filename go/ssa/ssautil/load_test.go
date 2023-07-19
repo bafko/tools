@@ -16,11 +16,11 @@ import (
 	"strings"
 	"testing"
 
-	"golang.org/x/tools/go/packages"
-	"golang.org/x/tools/go/packages/packagestest"
-	"golang.org/x/tools/go/ssa"
-	"golang.org/x/tools/go/ssa/ssautil"
-	"golang.org/x/tools/internal/testenv"
+	"github.com/bafko/tools/go/packages"
+	"github.com/bafko/tools/go/packages/packagestest"
+	"github.com/bafko/tools/go/ssa"
+	"github.com/bafko/tools/go/ssa/ssautil"
+	"github.com/bafko/tools/internal/testenv"
 )
 
 const hello = `package main

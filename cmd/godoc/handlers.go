@@ -11,11 +11,11 @@ import (
 	"net/http"
 	"text/template"
 
-	"golang.org/x/tools/godoc"
-	"golang.org/x/tools/godoc/redirect"
-	"golang.org/x/tools/godoc/vfs"
+	"github.com/bafko/tools/godoc"
+	"github.com/bafko/tools/godoc/redirect"
+	"github.com/bafko/tools/godoc/vfs"
 
-	_ "golang.org/x/tools/playground" // register "/compile" playground redirect
+	_ "github.com/bafko/tools/playground" // register "/compile" playground redirect
 )
 
 var (

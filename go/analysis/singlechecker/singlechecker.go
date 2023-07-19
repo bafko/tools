@@ -29,10 +29,10 @@ import (
 	"os"
 	"strings"
 
-	"golang.org/x/tools/go/analysis"
-	"golang.org/x/tools/go/analysis/internal/analysisflags"
-	"golang.org/x/tools/go/analysis/internal/checker"
-	"golang.org/x/tools/go/analysis/unitchecker"
+	"github.com/bafko/tools/go/analysis"
+	"github.com/bafko/tools/go/analysis/internal/analysisflags"
+	"github.com/bafko/tools/go/analysis/internal/checker"
+	"github.com/bafko/tools/go/analysis/unitchecker"
 )
 
 // Main is the main function for a checker command for a single analysis.

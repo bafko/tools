@@ -23,7 +23,7 @@ import (
 	"reflect"
 	"sort"
 
-	"golang.org/x/tools/go/packages"
+	"github.com/bafko/tools/go/packages"
 )
 
 func main() {

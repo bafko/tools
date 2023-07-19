@@ -18,8 +18,8 @@ import (
 	"strings"
 	"testing"
 
-	"golang.org/x/tools/internal/gcimporter"
-	"golang.org/x/tools/internal/typeparams"
+	"github.com/bafko/tools/internal/gcimporter"
+	"github.com/bafko/tools/internal/typeparams"
 )
 
 var isRace = false

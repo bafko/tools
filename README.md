@@ -1,5 +1,26 @@
 # Go Tools
 
+## Changes in this fork
+### `goimports`
+```
+go install github.com/bafko/tools/cmd/goimports@latest
+```
+
+The modified `goimports` now supports `group` argument that creates a new import group.
+The final order is following:
+1. Standard library.
+2. Local packages, defined by `local` argument.
+3. **Group packages, defined by `group` argument.**
+4. 3rd party packages.
+5. `appengine` packages.
+
+To use in GoLand, add the `goimports` file watcher with the following arguments:
+```
+--local=<module-name> --group=<group> --format-only -w $FilePath$
+```
+
+-------------------
+
 [![PkgGoDev](https://pkg.go.dev/badge/golang.org/x/tools)](https://pkg.go.dev/golang.org/x/tools)
 
 This repository provides the `golang.org/x/tools` module, comprising

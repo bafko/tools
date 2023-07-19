@@ -33,36 +33,47 @@ import (
 
 // importToGroup is a list of functions which map from an import path to
 // a group number.
-var importToGroup = []func(localPrefix, importPath string) (num int, ok bool){
-	func(localPrefix, importPath string) (num int, ok bool) {
+var importToGroup = []func(localPrefix, groupPrefix, importPath string) (num int, ok bool){
+	func(localPrefix, _, importPath string) (num int, ok bool) {
 		if localPrefix == "" {
 			return
 		}
 		for _, p := range strings.Split(localPrefix, ",") {
 			if strings.HasPrefix(importPath, p) || strings.TrimSuffix(p, "/") == importPath {
-				return 3, true
+				return 1, true
 			}
 		}
 		return
 	},
-	func(_, importPath string) (num int, ok bool) {
-		if strings.HasPrefix(importPath, "appengine") {
-			return 2, true
+	func(_, groupPrefix, importPath string) (num int, ok bool) {
+		if groupPrefix == "" {
+			return
+		}
+		for _, p := range strings.Split(groupPrefix, ",") {
+			if strings.HasPrefix(importPath, p) || strings.TrimSuffix(p, "/") == importPath {
+				return 2, true
+			}
 		}
 		return
 	},
-	func(_, importPath string) (num int, ok bool) {
+	func(_, _, importPath string) (num int, ok bool) {
+		if strings.HasPrefix(importPath, "appengine") {
+			return 4, true
+		}
+		return
+	},
+	func(_, _, importPath string) (num int, ok bool) {
 		firstComponent := strings.Split(importPath, "/")[0]
 		if strings.Contains(firstComponent, ".") {
-			return 1, true
+			return 3, true
 		}
 		return
 	},
 }
 
-func importGroup(localPrefix, importPath string) int {
+func importGroup(localPrefix, groupPrefix, importPath string) int {
 	for _, fn := range importToGroup {
-		if n, ok := fn(localPrefix, importPath); ok {
+		if n, ok := fn(localPrefix, groupPrefix, importPath); ok {
 			return n
 		}
 	}

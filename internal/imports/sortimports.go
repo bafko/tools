@@ -19,7 +19,7 @@ import (
 // It also removes duplicate imports when it is possible to do so without data loss.
 //
 // It may mutate the token.File.
-func sortImports(localPrefix string, tokFile *token.File, f *ast.File) {
+func sortImports(localPrefix, groupPrefix string, tokFile *token.File, f *ast.File) {
 	for i, d := range f.Decls {
 		d, ok := d.(*ast.GenDecl)
 		if !ok || d.Tok != token.IMPORT {
@@ -44,11 +44,11 @@ func sortImports(localPrefix string, tokFile *token.File, f *ast.File) {
 		for j, s := range d.Specs {
 			if j > i && tokFile.Line(s.Pos()) > 1+tokFile.Line(d.Specs[j-1].End()) {
 				// j begins a new run.  End this one.
-				specs = append(specs, sortSpecs(localPrefix, tokFile, f, d.Specs[i:j])...)
+				specs = append(specs, sortSpecs(localPrefix, groupPrefix, tokFile, f, d.Specs[i:j])...)
 				i = j
 			}
 		}
-		specs = append(specs, sortSpecs(localPrefix, tokFile, f, d.Specs[i:])...)
+		specs = append(specs, sortSpecs(localPrefix, groupPrefix, tokFile, f, d.Specs[i:])...)
 		d.Specs = specs
 
 		// Deduping can leave a blank line before the rparen; clean that up.
@@ -150,7 +150,7 @@ type posSpan struct {
 
 // sortSpecs sorts the import specs within each import decl.
 // It may mutate the token.File.
-func sortSpecs(localPrefix string, tokFile *token.File, f *ast.File, specs []ast.Spec) []ast.Spec {
+func sortSpecs(localPrefix, groupPrefix string, tokFile *token.File, f *ast.File, specs []ast.Spec) []ast.Spec {
 	// Can't short-circuit here even if specs are already sorted,
 	// since they might yet need deduplication.
 	// A lone import, however, may be safely ignored.
@@ -199,7 +199,7 @@ func sortSpecs(localPrefix string, tokFile *token.File, f *ast.File, specs []ast
 	// Reassign the import paths to have the same position sequence.
 	// Reassign each comment to abut the end of its spec.
 	// Sort the comments by new position.
-	sort.Sort(byImportSpec{localPrefix, specs})
+	sort.Sort(byImportSpec{localPrefix, groupPrefix, specs})
 
 	// Dedup. Thanks to our sorting, we can just consider
 	// adjacent pairs of imports.
@@ -263,6 +263,7 @@ func sortSpecs(localPrefix string, tokFile *token.File, f *ast.File, specs []ast
 
 type byImportSpec struct {
 	localPrefix string
+	groupPrefix string
 	specs       []ast.Spec // slice of *ast.ImportSpec
 }
 
@@ -272,8 +273,8 @@ func (x byImportSpec) Less(i, j int) bool {
 	ipath := importPath(x.specs[i])
 	jpath := importPath(x.specs[j])
 
-	igroup := importGroup(x.localPrefix, ipath)
-	jgroup := importGroup(x.localPrefix, jpath)
+	igroup := importGroup(x.localPrefix, x.groupPrefix, ipath)
+	jgroup := importGroup(x.localPrefix, x.groupPrefix, jpath)
 	if igroup != jgroup {
 		return igroup < jgroup
 	}

@@ -33,8 +33,13 @@ type Options struct {
 
 	// LocalPrefix is a comma-separated string of import path prefixes, which, if
 	// set, instructs Process to sort the import paths with the given prefixes
-	// into another group after 3rd-party packages.
+	// into another group before 3rd-party and GroupPrefix packages.
 	LocalPrefix string
+
+	// GroupPrefix is a comma-separated string of import path prefixes, which, if
+	// set, instructs Process to sort the import paths with the given prefixes
+	// into another group before 3rd-party and after LocalPrefix packages.
+	GroupPrefix string
 
 	Fragment  bool // Accept fragment of a source file (no package statement)
 	AllErrors bool // Report all errors (not just the first 10 on different lines)
@@ -116,7 +121,7 @@ func ApplyFixes(fixes []*ImportFix, filename string, src []byte, opt *Options, e
 // formatted file, and returns the postpocessed result.
 func formatFile(fset *token.FileSet, file *ast.File, src []byte, adjust func(orig []byte, src []byte) []byte, opt *Options) ([]byte, error) {
 	mergeImports(file)
-	sortImports(opt.LocalPrefix, fset.File(file.Pos()), file)
+	sortImports(opt.LocalPrefix, opt.GroupPrefix, fset.File(file.Pos()), file)
 	var spacesBefore []string // import paths we need spaces before
 	for _, impSection := range astutil.Imports(fset, file) {
 		// Within each block of contiguous imports, see if any
@@ -126,7 +131,7 @@ func formatFile(fset *token.FileSet, file *ast.File, src []byte, adjust func(ori
 		lastGroup := -1
 		for _, importSpec := range impSection {
 			importPath, _ := strconv.Unquote(importSpec.Path.Value)
-			groupNum := importGroup(opt.LocalPrefix, importPath)
+			groupNum := importGroup(opt.LocalPrefix, opt.GroupPrefix, importPath)
 			if groupNum != lastGroup && lastGroup != -1 {
 				spacesBefore = append(spacesBefore, importPath)
 			}
